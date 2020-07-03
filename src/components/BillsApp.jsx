@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import Bills from "./Bills";
+import FloatingMenu from "./FloatingMenu";
 
 class BillsApp extends Component {
   render() {
@@ -8,6 +9,7 @@ class BillsApp extends Component {
       <div id="BillsApp">
         <Header />
         <Bills />
+        <FloatingMenu />
       </div>
     );
   }
