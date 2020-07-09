@@ -9,6 +9,7 @@ class BillsApp extends Component {
       <div id="BillsApp">
         <Header />
         <Bills />
+        <div className="content-background"></div>
         <FloatingMenu />
       </div>
     );

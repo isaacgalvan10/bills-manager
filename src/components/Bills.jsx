@@ -42,6 +42,86 @@ class Bills extends Component {
               <div className="price">-$39.99</div>
             </div>
           </li>
+          <li className="bill">
+            <div className="company">
+              <img
+                className="logo"
+                src="//logo.clearbit.com/americanexpress.com"
+              />
+              <div className="title">American Express</div>
+              <div className="price">-$39.99</div>
+            </div>
+          </li>
+          <li className="bill">
+            <div className="company">
+              <img
+                className="logo"
+                src="//logo.clearbit.com/americanexpress.com"
+              />
+              <div className="title">American Express</div>
+              <div className="price">-$39.99</div>
+            </div>
+          </li>
+          <li className="bill">
+            <div className="company">
+              <img
+                className="logo"
+                src="//logo.clearbit.com/americanexpress.com"
+              />
+              <div className="title">American Express</div>
+              <div className="price">-$39.99</div>
+            </div>
+          </li>
+          <li className="bill">
+            <div className="company">
+              <img
+                className="logo"
+                src="//logo.clearbit.com/americanexpress.com"
+              />
+              <div className="title">American Express</div>
+              <div className="price">-$39.99</div>
+            </div>
+          </li>
+          <li className="bill">
+            <div className="company">
+              <img
+                className="logo"
+                src="//logo.clearbit.com/americanexpress.com"
+              />
+              <div className="title">American Express</div>
+              <div className="price">-$39.99</div>
+            </div>
+          </li>
+          <li className="bill">
+            <div className="company">
+              <img
+                className="logo"
+                src="//logo.clearbit.com/americanexpress.com"
+              />
+              <div className="title">American Express</div>
+              <div className="price">-$39.99</div>
+            </div>
+          </li>
+          <li className="bill">
+            <div className="company">
+              <img
+                className="logo"
+                src="//logo.clearbit.com/americanexpress.com"
+              />
+              <div className="title">American Express</div>
+              <div className="price">-$39.99</div>
+            </div>
+          </li>
+          <li className="bill">
+            <div className="company">
+              <img
+                className="logo"
+                src="//logo.clearbit.com/americanexpress.com"
+              />
+              <div className="title">American Express</div>
+              <div className="price">-$39.99</div>
+            </div>
+          </li>
         </ul>
       </div>
     );

@@ -4,6 +4,7 @@
   height: 100vh;
   width: 100vw;
   position: relative;
+  overflow: hidden;
 
   header {
     display: flex;
@@ -17,7 +18,11 @@
   }
 
   #Bills {
+    position: relative;
+    z-index: 3;
     padding: 0 30px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
 
     .total-bills {
       display: flex;
@@ -39,8 +44,11 @@
 
   .bills-list {
     background: white;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 0;
+    -webkit-box-shadow: 0px 10px 31px -9px rgba(173, 173, 173, 1);
+    -moz-box-shadow: 0px 10px 31px -9px rgba(173, 173, 173, 1);
+    box-shadow: 0px 10px 31px -9px rgba(173, 173, 173, 1);
 
     .bill {
       list-style: none;
@@ -70,25 +78,37 @@
       }
     }
   }
+  .content-background {
+    background: #e8e8e8;
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
 }
 
 #FloatingMenu {
   background-color: white;
-  padding: 20px;
+  padding: 10px 0;
   display: flex;
   justify-content: space-evenly;
   position: absolute;
+  z-index: 100;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
+  -webkit-box-shadow: 0px -10px 31px -9px rgba(173, 173, 173, 1);
+  -moz-box-shadow: 0px -10px 31px -9px rgba(173, 173, 173, 1);
+  box-shadow: 0px -10px 31px -9px rgba(173, 173, 173, 1);
 
   .icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
     color: grey;
   }
 
   .text {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: grey;
   }
 
@@ -126,6 +146,31 @@
 
     .icon {
       font-size: 1.5rem;
+    }
+  }
+}
+
+@media all and (min-width: 600px) {
+  #root {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #BillsApp {
+    width: 414px;
+    height: 896px;
+    border-radius: 15px;
+    .content-background {
+      height: 500px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      background: rgb(232, 232, 232);
     }
   }
 }
