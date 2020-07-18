@@ -4,7 +4,7 @@ class Bills extends Component {
   state = {};
   render() {
     return (
-      <div id="Bills" className="container">
+      <div id="Bills" className="container disable-scrollbars">
         <div className="total-bills">
           <div className="text">Total Amount</div>
           <div className="number">$850</div>

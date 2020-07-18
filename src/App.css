@@ -1,0 +1,295 @@
+::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+
+#BillsApp {
+  background-color: #74ebd5;
+  background: linear-gradient(149deg, #74ebd5 0%, #9face6 100%);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+#BillsApp header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+#BillsApp header h2 {
+  font-size: 2rem;
+}
+
+#BillsApp #Bills {
+  position: relative;
+  z-index: 3;
+  padding: 0 30px;
+  height: calc(100vh - 70px);
+  overflow: scroll;
+}
+
+#BillsApp #Bills .total-bills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+}
+
+#BillsApp #Bills .total-bills .text {
+  font-size: 1.3rem;
+}
+
+#BillsApp #Bills .total-bills .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#BillsApp .bills-list {
+  background: white;
+  border-radius: 10px;
+  padding: 0;
+  -webkit-box-shadow: 0px 10px 31px -9px #adadad;
+  box-shadow: 0px 10px 31px -9px #adadad;
+}
+
+#BillsApp .bills-list .bill {
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 20px;
+  border-bottom: 1px solid #a8a8a8;
+}
+
+#BillsApp .bills-list .bill:last-child {
+  border: none;
+}
+
+#BillsApp .bills-list .company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#BillsApp .bills-list .company .logo {
+  width: 35px;
+  height: 35px;
+}
+
+#BillsApp .bills-list .company .title {
+  margin-left: 20px;
+}
+
+#BillsApp .bills-list .company .price {
+  font-weight: bold;
+  color: red;
+}
+
+#BillsApp .content-background {
+  background: #e8e8e8;
+  height: 70vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+
+#FloatingMenu {
+  background-color: white;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  width: 100%;
+  -webkit-box-shadow: 0px -10px 31px -9px #adadad;
+  box-shadow: 0px -10px 31px -9px #adadad;
+}
+
+#FloatingMenu .icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: grey;
+}
+
+#FloatingMenu .text {
+  font-size: 1.5rem;
+  color: grey;
+}
+
+#FloatingMenu .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+#FloatingMenu .link:hover {
+  background: linear-gradient(149deg, #74ebd5 0%, #9face6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+#FloatingMenu .link:hover:last-child .fas:before {
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#FloatingMenu .add-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: white;
+  background: linear-gradient(149deg, #74ebd5 0%, #9face6 100%);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#FloatingMenu .add-button .icon {
+  font-size: 1.5rem;
+}
+
+#AddBill {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  background: linear-gradient(149deg, #74ebd5 0%, #9face6 100%);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+#AddBill .container {
+  padding: 0 20px;
+}
+
+#AddBill h2 {
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+#AddBill .form-group {
+  margin: 0 0 1.5rem;
+}
+
+#AddBill label {
+  display: block;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#AddBill input {
+  display: block;
+  background: transparent;
+  border: 1px solid white;
+  font-size: 1.1rem;
+  padding: 5px;
+  color: white;
+  width: 99%;
+  text-align: center;
+}
+
+#AddBill input:focus {
+  outline: 0;
+}
+
+#AddBill button {
+  background: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media all and (min-width: 600px) {
+  #root {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #BillsApp {
+    width: 414px;
+    height: 896px;
+    border-radius: 15px;
+  }
+  #BillsApp .content-background {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    background: #e8e8e8;
+  }
+}
+
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*# sourceMappingURL=App.css.map */
