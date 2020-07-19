@@ -1,6 +1,14 @@
-::-webkit-scrollbar {
+.disable-scrollbars {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
+.disable-scrollbars::-webkit-scrollbar {
   width: 0px;
-  display: none;
+  background: transparent;
+  /* Chrome/Safari/Webkit */
 }
 
 #BillsApp {
@@ -23,6 +31,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 0;
+  color: #1b1b1b;
 }
 
 #BillsApp header h2 {
@@ -50,6 +59,7 @@
 
 #BillsApp #Bills .total-bills .text {
   font-size: 1.3rem;
+  color: #1b1b1b;
 }
 
 #BillsApp #Bills .total-bills .number {
@@ -209,6 +219,15 @@
   overflow: hidden;
   -webkit-transform: translate3d(100%, 0, 0);
           transform: translate3d(100%, 0, 0);
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: -webkit-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+}
+
+#AddBill.active {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 #AddBill .container {
@@ -217,7 +236,7 @@
 
 #AddBill h2 {
   font-size: 2rem;
-  color: white;
+  color: #1b1b1b;
   text-transform: uppercase;
   text-align: center;
   margin: 2rem 0;
@@ -229,7 +248,7 @@
 
 #AddBill label {
   display: block;
-  color: white;
+  color: #1b1b1b;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -257,6 +276,7 @@
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 @media all and (min-width: 600px) {

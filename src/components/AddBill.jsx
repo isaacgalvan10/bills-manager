@@ -5,7 +5,8 @@ class AllBills extends Component {
     super();
     this.state = {
       business_name: '',
-      price: 0
+      price: '',
+      status: 'unpaid'
     };
   }
 
@@ -21,13 +22,17 @@ class AllBills extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    this.setState({
+      business_name: '',
+      price: ''
+    })
     this.props.saveBill(this.state)
     console.log(this.state);
   }
 
   render() {
     return (
-      <section id="AddBill" className={`${this.props.addBillOpen == true ? `active` : ``}`}>
+      <section id="AddBill" className={`${this.props.addBillOpen === true ? `active` : ``}`}>
         <div className="container">
           <h2>Add Bill</h2>
           <form onSubmit={this.handleSubmit}>
@@ -37,7 +42,7 @@ class AllBills extends Component {
             </div>
             <div className="form-group">
               <label htmlFor="price">Price</label>
-              <input type="text" id="price" name="price" onChange={this.inputChange} value={this.state.business_price} />
+              <input type="text" id="price" name="price" onChange={this.inputChange} value={this.state.price} />
             </div>
             <button type="submit">Save</button>
           </form>

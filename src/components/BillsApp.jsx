@@ -9,8 +9,14 @@ class BillsApp extends Component {
   constructor() {
     super();
     this.state = {
-      addBillOpen: true,
-      allBills: []
+      addBillOpen: false,
+      allBills: [
+        {
+          business_name: 'Geico',
+          price: 50,
+          status: 'unpaid'
+        }
+      ]
     }
   }
 
@@ -25,19 +31,52 @@ class BillsApp extends Component {
       $push: [bill]
     })
     this.setState({
-      allBills: newBills
+      allBills: newBills,
+      addBillOpen: !this.state.addBillOpen
     }, () => {
       console.log(this.state)
     })
+  }
+
+  changeBillStatus = (billIndex) => {
+    const allBills = this.state.allBills;
+    let bill = allBills[billIndex];
+    if (bill.status === 'unpaid') {
+      bill.status = 'paid'
+    } else {
+      bill.status = 'unpaid'
+    }
+
+    const newState = update(this.state, {
+      allBills: {
+        $set: allBills
+      }
+    });
+
+    this.setState(newState, () => {
+      console.log(this.state)
+    })
+  }
+
+  deleteBill = (billIndex) => {
+    const allBills = this.state.allBills;
+    allBills.splice(billIndex, 1);
+
+    const newState = update(this.state, {
+      allBills: {
+        $set: allBills
+      }
+    });
+
+    this.setState(newState);
   }
 
   render() {
     return (
       <div id="BillsApp">
         <Header />
-        <Bills />
+        <Bills allBills={this.state.allBills} changeBillStatus={this.changeBillStatus} deleteBill={this.deleteBill} />
         <AddBill addBillOpen={this.state.addBillOpen} saveBill={this.saveBill} />
-        <div className="content-background"></div>
         <FloatingMenu clickAddBillBtn={this.clickAddBillBtn} />
       </div>
     );
