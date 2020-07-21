@@ -14,7 +14,7 @@ class Bills extends Component {
           <li className={`bill ${bill.status === 'paid' ? 'active' : ''}`} key={index}>
             <div className="company">
               <div className="logo">
-                <img src="//logo.clearbit.com/netflix.com" />
+                <i className="fas fa-file-invoice"></i>
                 <div className="title">{bill.business_name}</div>
               </div>
               <div className="price">-${bill.price}</div>

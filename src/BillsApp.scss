@@ -98,7 +98,8 @@ $font_color: #1b1b1b;
         align-items: center;
       }
 
-      img {
+      .fa-file-invoice {
+        font-size: 2rem;
         width: 35px;
         height: 35px;
         border-radius: 10px;
@@ -160,11 +161,6 @@ $font_color: #1b1b1b;
   .icon {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    color: grey;
-  }
-
-  .text {
-    font-size: 1.5rem;
     color: grey;
   }
 

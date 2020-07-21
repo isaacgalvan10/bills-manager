@@ -25,9 +25,8 @@ class AllBills extends Component {
     this.setState({
       business_name: '',
       price: ''
-    })
+    });
     this.props.saveBill(this.state)
-    console.log(this.state);
   }
 
   render() {
@@ -38,11 +37,11 @@ class AllBills extends Component {
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="business_name">Business Name</label>
-              <input type="text" id="business_name" name="business_name" onChange={this.inputChange} value={this.state.business_name} />
+              <input type="text" id="business_name" name="business_name" placeholder="Netflix" onChange={this.inputChange} value={this.state.business_name} />
             </div>
             <div className="form-group">
               <label htmlFor="price">Price</label>
-              <input type="text" id="price" name="price" onChange={this.inputChange} value={this.state.price} />
+              <input type="text" id="price" name="price" placeholder="10" onChange={this.inputChange} value={this.state.price} />
             </div>
             <button type="submit">Save</button>
           </form>

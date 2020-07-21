@@ -13,7 +13,7 @@ class BillsApp extends Component {
       allBills: [
         {
           business_name: 'Geico',
-          price: 50,
+          price: 150,
           status: 'unpaid'
         }
       ]
@@ -70,6 +70,8 @@ class BillsApp extends Component {
 
     this.setState(newState);
   }
+
+
 
   render() {
     return (
